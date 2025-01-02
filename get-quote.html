@@ -207,6 +207,38 @@ $(window).on("load", function(e) {
         $('.dropdown-desktop > .dropdown-toggle').css('border-bottom-color', '#ffffff')
     }
 })
+
+// Handle form submission
+$('#wf-form-Quote-Request').on('submit', function(e) {
+    e.preventDefault();
+    
+    var $form = $(this);
+    var $successMessage = $('.success-message');
+    var $failMessage = $('.w-form-fail');
+    var $submitButton = $form.find('input[type="submit"]');
+    var originalButtonText = $submitButton.val();
+    
+    $submitButton.val($submitButton.attr('data-wait'));
+    
+    $.ajax({
+        url: $form.attr('action'),
+        method: 'POST',
+        data: $form.serialize(),
+        success: function(response) {
+            $form.hide();
+            $failMessage.hide();
+            $successMessage.show();
+            $form[0].reset();
+        },
+        error: function(xhr, status, error) {
+            $successMessage.hide();
+            $failMessage.show();
+        },
+        complete: function() {
+            $submitButton.val(originalButtonText);
+        }
+    });
+});
 </script>
 </body>
 </html>
