@@ -669,6 +669,22 @@ a {
   min-height: 500px;
 }
 
+.imagecontainer.full-height.full-width.slide-in.commercial-cleaning {
+  background-image: url('../images/interior-modern-open-space-office-3d-illustration.jpg');
+}
+
+.imagecontainer.full-height.full-width.slide-in.construction-cleaning {
+  background-image: url('../images/construction-job-site-cleaning-expanded.jpg');
+}
+
+.imagecontainer.full-height.full-width.slide-in.move-in-and-move-out {
+  background-image: url('../images/empty-room-full-of-cardboard-boxes-for-moving-2SF53D6.jpg');
+}
+
+.imagecontainer.full-height.full-width.slide-in.special-event-cleaning {
+  background-image: url('../images/special-event-cleaning.jpg');
+}
+
 .columns-2 {
   justify-content: center;
   align-items: flex-start;
@@ -1004,6 +1020,24 @@ a {
 }
 
 .inner-header.services.special-event {
+  background-image: url('../images/special-event-cleaning-header.jpg');
+  background-position: 50% 10%;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.inner-header.services.move-in-move-out {
+  background-image: url('../images/happy-couple-having-fun-while-moving-in-Q7KGXMF.jpg');
+  background-position: 50% 10%;
+}
+
+.inner-header.services.commercial-cleaning {
+  background-image: url('../images/adult-cleaner-maid-woman-with-uniform-cleaning.jpg');
+  background-position: 50% 10%;
+}
+
+.inner-header.services.construction-cleaning {
+  background-image: url('../images/home-remodeling-concept.jpg');
   background-position: 50% 10%;
 }
 
@@ -1474,11 +1508,24 @@ a {
 }
 
 .column-10 {
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
+  background-image: url('../images/construction-job-site-cleaning-expanded.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
   min-height: 300px;
+}
+
+.column-10.special-event-cleaning {
+  background-image: url('../images/special-event-cleaning.jpg');
+}
+
+.column-10.move-in-move-out {
+  background-image: url('../images/empty-room-full-of-cardboard-boxes-for-moving-2SF53D6.jpg');
+}
+
+.column-10.commercial-cleaning {
+  background-image: url('../images/interior-modern-open-space-office-3d-illustration.jpg');
 }
 
 .column-11 {
@@ -1746,7 +1793,7 @@ a {
   }
 
   .section.odd.sanspadding.desktop {
-    display: none;
+    display: flex;
   }
 
   .section.quote {
@@ -1791,11 +1838,12 @@ a {
   }
 
   .columns-2.full-height {
-    display: block;
+    flex-flow: column;
   }
 
   .inner-page-copy-area {
     text-align: center;
+    order: 1;
     align-items: center;
     padding-left: 10px;
   }
